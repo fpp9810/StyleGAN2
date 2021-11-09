@@ -7,6 +7,9 @@ import ipywidgets
 import os
 from IPython.display import clear_output
 
+os.system("apt install sudo")
+os.system("sudo apt-get install software-properties-common")
+os.system("sudo apt-get update")
 class _NoteProgress(apt.progress.base.InstallProgress, apt.progress.base.AcquireProgress, apt.progress.base.OpProgress):
   def __init__(self):
     apt.progress.base.InstallProgress.__init__(self)
